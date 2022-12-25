@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 @Component({
   selector: 'app-main',
@@ -7,4 +8,8 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent extends AppComponent  {
-}
+
+  }
+
+;
+

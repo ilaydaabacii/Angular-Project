@@ -14,6 +14,10 @@ export class AppComponent {
   loggedIn = false;
 
   locale = {
+    name:'',
+    subject:'',
+    message:'',
+
     index: '',
     products: '',
     categories: '',
@@ -53,6 +57,9 @@ export class AppComponent {
     if (!lang) this.setLang('tr');
 
     if (lang === 'tr') {
+      this.locale.name='İsim';
+      this.locale.subject='Konu'
+      this.locale.message='Mesaj';
       this.locale.index = 'Hakkımızda';
       this.locale.products = 'Ürünler';
       this.locale.categories = 'Kategoriler';
@@ -69,6 +76,9 @@ export class AppComponent {
       this.locale.send = 'Gönder';
     }
     if (lang === 'en') {
+      this.locale.name='Name';
+      this.locale.subject='Subject'
+      this.locale.message='Message';
       this.locale.index = 'About Us';
       this.locale.products = 'Products';
       this.locale.categories = 'Categories';

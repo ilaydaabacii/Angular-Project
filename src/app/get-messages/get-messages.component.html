@@ -1,24 +1,28 @@
-<div class="form-floating mt-2 mb-2">
-    <input
-      [(ngModel)]="textInput"
-      name="searchInput"
-      #searchInput
-      id="searchInput"
-      type="search"
-      class="form-control"
-      placeholder="asdf"
-      (keyup)="searchQuery($event)"
-    />
-    <label for="searchInput"> Bir mesaj arayın... </label>
-  </div>
+<div
+class="form-group input col-sm-12 col-md-12 my-2"
+>
+<div class="form-floating">
+  <input
+    [(ngModel)]="textInput"
+    name="searchInput"
+    #searchInput
+    id="searchInput"
+    type="search"
+    class="form-control"
+    placeholder="asdf"
+    (keyup)="searchQuery($event)"
+  />
+  <label for="searchInput"> Bir mesaj arayın... </label>
+</div>
+</div>
 
 <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Subject</th>
-        <th scope="col">Message</th>
+        <th scope="col">{{ locale.name }}</th>
+        <th scope="col">{{ locale.subject }}</th>
+        <th scope="col">{{ locale.message }}</th>
       </tr>
     </thead>
     <tbody>

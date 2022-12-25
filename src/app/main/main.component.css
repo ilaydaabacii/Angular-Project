@@ -1,0 +1,19 @@
+#menü{
+    background:grey;
+    width:80px;
+    height:50px;
+    text-align:center;
+    justify-content: center;
+    line-height: 50px;
+    border-radius:20px;
+    transition:all .3s ease;
+    z-index:999
+}
+
+#menü:hover{
+    background-color:#fcb100
+}
+
+#menü::-webkit-scrollbar-corner{
+    display: block;
+}

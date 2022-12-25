@@ -36,6 +36,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetMessagesComponent } from './get-messages/get-messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SummaryPipe } from './pipe/summary.pipe';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,9 @@ import { SummaryPipe } from './pipe/summary.pipe';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgsRevealModule,
     NgxPaginationModule,
+   
   
     ToastrModule.forRoot({
       progressBar: true,

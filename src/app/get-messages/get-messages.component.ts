@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {IMessage} from '../Models/IMessage'
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-get-messages',
   templateUrl: './get-messages.component.html',
   styleUrls: ['./get-messages.component.css']
 })
-export class GetMessagesComponent implements OnInit {
+export class GetMessagesComponent extends AppComponent {
 
-  constructor() { }
   textInput: string = '';
   filteredMessage: any = [];
 
@@ -20,13 +20,9 @@ export class GetMessagesComponent implements OnInit {
     {id:5, Name: "Ryan Gosling", Subject:"Design", Message:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, possimus?"}
   ]
 
-  ngOnInit(): void {
-  }
   searchQuery(event: any) {
-    this.message = this.filteredMessage.filter((i: { name: string }) =>
-      i.name.toLowerCase().includes(this.textInput.toLowerCase())
-    );
-    console.log(this.textInput);
-  }
+    return this.filteredMessage = this.textInput ? this.message.filter((x: IMessage) => 
+    x.Name.toLowerCase().includes(this.textInput) 
+   || x.Subject.toLowerCase().includes(this.textInput)) : this.message;
 
-}
+}}
