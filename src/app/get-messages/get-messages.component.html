@@ -1,0 +1,33 @@
+<div class="form-floating mt-2 mb-2">
+    <input
+      [(ngModel)]="textInput"
+      name="searchInput"
+      #searchInput
+      id="searchInput"
+      type="search"
+      class="form-control"
+      placeholder="asdf"
+      (keyup)="searchQuery($event)"
+    />
+    <label for="searchInput"> Bir mesaj arayın... </label>
+  </div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of message">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.Name}}</td>
+        <td>{{item.Subject}}</td>
+        <td>{{item.Message | summary}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

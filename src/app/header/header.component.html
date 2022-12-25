@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a
+      href="/"
+      class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1 d-inline-flex"
+    >
+     <span class="navbar-brand">Northwind</span>
+    </a>
+
+    <div class="nav-item dropdown">
+      <a
+        class="nav-link ms-1 dropdown-toggle"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-language"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li (click)="setLang('en')" style="cursor: pointer">
+          <a class="dropdown-item">
+            <img src="../../assets/icons/gb.png" /> English</a
+          >
+        </li>
+        <li (click)="setLang('tr')" style="cursor: pointer">
+          <a class="dropdown-item"
+            ><img src="../../assets/icons/tr.png" /> Türkçe</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse text-center justify-content-lg-end"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav nav-pills">
+        <ng-template [ngIf]="loggedIn" [ngIfElse]="login">
+          <a
+            class="nav-link ms-1"
+            aria-current="page"
+            routerLink="/"
+            routerLinkActive=""
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ locale.index }}</a
+          >
+          <a
+            class="nav-link ms-1"
+            routerLink="/products"
+            routerLinkActive=""
+            >{{ locale.products }}</a
+          >
+          <a
+            class="nav-link ms-1"
+            routerLink="/employees"
+            routerLinkActive=""
+            >{{ locale.employees }}</a
+          >
+          <a
+            class="nav-link ms-1"
+            routerLink="/get-messages"
+            routerLinkActive=""
+            >{{ locale.msgReceived }}</a
+          >
+
+          <a class="nav-link ms-1" routerLink="/logout" id="logout">{{
+            locale.logout
+          }}</a>
+        </ng-template>
+        <ng-template #login>
+          <a class="nav-link ms-1" routerLink="/login">
+            <i class="fa-solid fa-user-lock me-2"></i>{{ locale.login }}
+          </a>
+          <a class="nav-link ms-3" routerLink="/register">
+            <i class="fa-solid fa-user-pen me-2"></i>{{ locale.register }}
+          </a>
+        </ng-template>
+        <a
+          class="nav-link ms-1"
+          routerLink="/contact-us"
+          routerLinkActive=""
+          >{{ locale.contactUs }}</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

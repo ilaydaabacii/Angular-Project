@@ -1,0 +1,58 @@
+<app-slider></app-slider>
+
+<app-intro></app-intro>
+<ng-template [ngIf]="loggedIn" >
+<div id="menü" class="btn-group btn-outline-secondary dropup d-flex justify-content-end ">
+    <a
+      class="nav-link dropdown-toggle"
+      href="#"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Menü
+    </a>
+    <ul class="dropdown-menu">
+      <li style="cursor: pointer">
+        <a
+        class="nav-link d-flex justify-content-center m-2"
+        aria-current="page"
+        routerLink="/"
+        routerLinkActive=""
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ locale.index }}</a>
+      </li>
+      <li  style="cursor: pointer">
+        <a
+        class="nav-link d-flex justify-content-center m-2 "
+        routerLink="/products"
+        routerLinkActive=""
+        >{{ locale.products }}</a
+      >
+      </li>
+      <li  style="cursor: pointer">
+        <a
+        class="nav-link d-flex justify-content-center m-2"
+        routerLink="/employees"
+        routerLinkActive=""
+        >{{ locale.employees }}</a
+      >
+      </li>
+      <li  style="cursor: pointer">
+        <a
+        class="nav-link d-flex justify-content-center m-2"
+        routerLink="/get-messages"
+        routerLinkActive=""
+        >{{ locale.msgReceived }}</a
+      >
+      </li>
+      <li  style="cursor: pointer">
+        <a class="nav-link d-flex justify-content-center m-2" routerLink="/logout" id="logout">{{
+            locale.logout
+          }}</a>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<br>
+<br>
