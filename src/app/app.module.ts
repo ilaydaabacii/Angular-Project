@@ -21,22 +21,24 @@ import {
   Validators,
 } from '@angular/forms';
 import {
-  EditProductsModal,
   ProductsComponent,
 } from './products/products.component';
 import { MainComponent } from './main/main.component';
-import {
-  EditEmployeeModal,
-  EmployeesComponent,
-} from './employees/employees.component'
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { IntroComponent } from './main/intro/intro.component';
-import { SliderComponent } from './main/slider/slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetMessagesComponent } from './get-messages/get-messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SummaryPipe } from './pipe/summary.pipe';
 import { NgsRevealModule } from 'ngx-scrollreveal';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { SortByPipe } from './pipe/sortby.pipe';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SssComponent } from './sss/sss.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -48,14 +50,14 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
     RegisterComponent,
     ProductsComponent,
     MainComponent,
-    EmployeesComponent,
     ContactUsComponent,
-    IntroComponent,
-    SliderComponent,
-    EditProductsModal,
-    EditEmployeeModal,
     GetMessagesComponent,
     SummaryPipe,
+    AboutUsComponent,
+    SortByPipe,
+    ProductDetailComponent,
+    FilterPipe,
+    SssComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,9 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
     BrowserAnimationsModule,
     NgsRevealModule,
     NgxPaginationModule,
+    OrderModule,
+    FilterPipeModule,
+    FormsModule,
    
   
     ToastrModule.forRoot({

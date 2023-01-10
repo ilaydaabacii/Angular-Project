@@ -1,0 +1,21 @@
+<div *ngIf="product else templateName">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="assets/img/{{product.imgURL}}" alt="" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h1 class="card-title"> {{product.paketadi}} </h1>
+                    <h4 class="card-item">{{product.fiyat}} ₺</h4>
+                    <p class="card-text"> {{product.aciklama}} </p>
+                </div>
+                <a href="https://capkincentilmen.dukkan.im/{{product.paketURL}}" target="_blank" class="btn btn-outline-dark w-100">Satın Al</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #templateName>
+    <div class="alert alert-danger"> {{pValue}} Ürün bulunamadı.</div>
+</ng-template>

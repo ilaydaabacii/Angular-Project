@@ -1,58 +1,181 @@
-<app-slider></app-slider>
-
-<app-intro></app-intro>
-<ng-template [ngIf]="loggedIn"  >
-<div id="menü" class="btn-group btn-outline-secondary dropup" ngsReveral >
-    <a
-      class="nav-link dropdown-toggle"
-      href="#"
-      role="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Menü
-    </a>
-    <ul class="dropdown-menu">
-      <li style="cursor: pointer">
-        <a
-        class="nav-link d-flex justify-content-center m-2"
-        aria-current="page"
-        routerLink="/"
-        routerLinkActive=""
-        [routerLinkActiveOptions]="{ exact: true }"
-        >{{ locale.index }}</a>
-      </li>
-      <li  style="cursor: pointer">
-        <a
-        class="nav-link d-flex justify-content-center m-2 "
-        routerLink="/products"
-        routerLinkActive=""
-        >{{ locale.products }}</a
-      >
-      </li>
-      <li  style="cursor: pointer">
-        <a
-        class="nav-link d-flex justify-content-center m-2"
-        routerLink="/employees"
-        routerLinkActive=""
-        >{{ locale.employees }}</a
-      >
-      </li>
-      <li  style="cursor: pointer">
-        <a
-        class="nav-link d-flex justify-content-center m-2"
-        routerLink="/get-messages"
-        routerLinkActive=""
-        >{{ locale.msgReceived }}</a
-      >
-      </li>
-      <li  style="cursor: pointer">
-        <a class="nav-link d-flex justify-content-center m-2" routerLink="/logout" id="logout">{{
-            locale.logout
-          }}</a>
-      </li>
-    </ul>
+<div class="cantainer " style="border-bottom: 1px solid  #430e00; border-top: 1px solid  #430e00; border-left: 1px solid  #430e00;">
+  <div class="row" >
+    <div class="col-md-5" >
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 class="ms-3 mt-5">Çapkın bir centilmen</h1>
+      <h1 class="ms-3">olmayı öğrenmenin adresi!</h1>
+      <br>
+      <p class="ms-3">Centilmen olmanın tüm inceliklerini öğrenmek için</p>
+      <button routerLink="/products" class="btn btn-lg btn-dark ms-3">Şimdi Başla</button>
+    </div>
+    <div class="col-md-7 " >
+      <img src="../../assets/img/bg.jpg" alt="" class="w-100">
+    </div>
   </div>
-</ng-template>
+</div>
+<br>
+<br>
+<div style="background-color: #430e00; color: white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mt-5 ms-5 ps-5 pt-4" >
+        <img src="../../assets/img/1.jpg" alt="" style="border-radius: 5%; " id="effect" class="shadow w-75">
+      </div>
+      <div class="col-md-7 mt-5 ">
+        <h4 class="mb-3 mt-5">Çapkın centilmen koçluk paketleri ile karşı cinsle yaşadığın sorunları bitirmek ve yeni hayatına bir adım atmak ister misin?</h4>
+        <p style="font-size: 18px;" class="mb-4">Çapkın Centilmen erkeklere özel koçluk sistemiyle, erkeklerin özel hayatlarını geliştirmesi ve kadınlarla olan ilişkilerini ilerletmesine yardımcı olacak bir çok hizmet sunuyoruz.</p>
+        <h5 class="mb-2">Nedir Bu Özel Koçluk?</h5>
+        <p style="font-size: 18px;"> Özel koçluk sistemi, danışanımızın yaşadığı sorunlar ve istediği hizmetler doğrultusunda kişiye özel bir yol haritası çizilerek koçluk süreci boyunca whatsapp üzerinden uzman koçumuzla 7/24 iletişim halinde olarak gelişimini tamamlama sürecidir. Danışan koçluk süresini seçtiği paket doğrultusunda belirler. Danışman koçuyla birebir eğitim görür ve makale, kitap gibi materyaller ile destek sağlanır.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5 ms-5 pt-3">
+       <h4 class="mb-3 mt-5">Koçluk Peketi içerikleri</h4>
+       <ul class="mb-3 mt-5">
+        <li>Sınırsız soru sorma hakkı.</li>
+        <li>Sosyal medya ve gerçek hayatta kadınlarla tanışma desteği.</li>
+        <li>Konuştuğunuz kadınlarla takıldığınız yerlerde mesajlaşma desteği.</li>
+        <li>Buluşmanızı daha iyi hale getirmek için size özel oluşturulacak stratejiler.</li>
+        <li>Yazışırken tıkandığınız yerlerde ne yazabileceğinize dair fikirler.</li>
+        <li>Tıkandığınız konularda sorununuzun sebebini tespit etme ve çözümünü öğrenme.</li>
+        <li>Kadınlardan numara alma ve buluşmaya çağırma için etkili teknikler.</li>
+        <li>Kişilik analizi ile güçlü yönlerinizi ortaya çıkartma.</li>
+        <li>Diyaloglarınıza derin analiz tekniği ile hatalarınızı tespit etme ve daha iyi iletişim kurmanızı sağlama.</li>
+        <li>Kişisel gelişim.</li>
+        <li>Cinsellik.</li>
+        <li>Koç ile bire bir telefon görüşmesi.</li>
+        <li>Sohbet başlatma teknikleri.</li>
+        <li>Açılış teknikleri.</li>
+       </ul>
+      </div> 
+      <div class="col-md-5 mt-5 pt-5 text-end">
+        <img src="../../assets/img/koçluk.jpg" alt="" id="effect" class="w-100" >
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mt-5 ms-5 pt-3">
+        <img src="../../assets/img/pexels-vitaliy-izonin-12036534.jpg" id="effect" alt="" style="border-radius: 5%;" class="shadow w-75">
+      </div>
+      <div class="col-5 mt-5 pt-5">
+        <br>
+        <br>
+        <h4>Kimler Koçluk Desteğinden Yararlanabilir?</h4>
+        <ul>
+          <li>Kendini geliştirmek isteyenler,</li>
+          <li>Sosyal becerilerini üst düzeye çıkartmak isteyenler,</li>
+          <li>Kadın psikolojisini öğrenmek ve ona uygun davranmak isteyenler,</li>
+          <li>Doğru ve kaliteli erkek davranışlarını öğrenmek isteyenler,</li>
+          <li>İlişkisi olan ya da olmayan fark etmeksizin her erkek yararlanabilir.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-5">
+      <h4 class="text-center mt-5">Popüler E-Kitaplar</h4>
+      <p class="text-center ms-">E-kitaplar pdf şeklinde iletilen dijital ürünlerdir. Her konuya yönelik e-kitap içeriğimiz vardır. <br> Koçluğa ek olarak tavsiye edilir. Başlangıç için uygun olup basit sorunlara çözüm sağlar. <br> Daha komplike sorunlar için koçluk paketlerimize göz atın!</p>
+      <div class="col-md-3 mt-4 text-center">
+        <img src="../../assets/img/sosyal-medya-ile-kadinlari-etkileyin.jpg" id="effect" alt=""width="250px"  class="mb-2" style="border-radius: 5%;">
+        <h6 class="card-title" ><a href="http://localhost:4200/products/6" style="color: white;">Sosyal medya ile kadınları etkileyin </a></h6>
+        <a href="https://capkincentilmen.dukkan.im/sosyal-medya-ile-kadinlari-etkileyin" ><button class="btn btn-light mt-3 mb-5 w-75">Ürüne Git</button></a>
+      </div>
+      <div class="col-md-3 mt-4 text-center">
+        <img src="../../assets/img/tehlikeli-manipulasyon-taktikleri (1).jpg" id="effect" alt=""width="250px"  class="mb-2" style="border-radius: 5%;">
+        <h6 class="card-title" ><a href="http://localhost:4200/products/9" style="color: white;">Tehlikeli Manipülasyon Taktileri </a></h6>
+       <a href="https://capkincentilmen.dukkan.im/tehlikeli-manipulasyon-taktikleri" > <button class="btn btn-light mt-3 mb-5 w-75">Ürüne Git</button></a>
+      </div>
+      <div class="col-md-3 mt-4 text-center">
+        <img src="../../assets/img/laf-cambazligi.jpg" alt=""width="250px" id="effect" class="mb-2" style="border-radius: 5%;">
+        <h6 class="card-title" ><a href="http://localhost:4200/products/7" style="color: white;">Laf Cambazlığı</a></h6>
+       <a href="https://capkincentilmen.dukkan.im/laf-cambazligi" > <button class="btn btn-light mt-3 mb-5 w-75">Ürüne Git</button></a>
+      </div>
+      <div class="col-md-3 mt-4 text-center">
+        <img src="../../assets/img/mutlu-yasamin-formulu (1).jpg" alt=""  id="effect" width="250px" class="mb-2" style="border-radius: 5%;">
+        <h6 class="card-title" ><a href="http://localhost:4200/products/11" style="color: white;">Mutlu Yaşamın Formülü </a></h6>
+        <a href="https://capkincentilmen.dukkan.im/mutlu-yasamin-formulu" ><button class="btn btn-light mt-3 mb-5 w-75">Ürüne Git</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center m-5">
+  <h2>Neden Centilmen Olmalıyım?</h2>
+  <h6>Çapkın Centilmen kadın-erkek ilişkilerindeki sorunları ele alarak erkeklere yönelik kişisel gelişimini tamamlamak ve ilişki-flört hayatını düzenlmeye yardımcı olur. Erkeklerin özel hayatlarını geliştirmesi ve kadınlarla olan ilişkilerini ilerletmesine yardımcı olacak birçok hizmet sunuyoruz. </h6>
+
+  <div class="row">
+    <div class="col-md-4 mt-5">
+      <img src="../../assets/icons/couple.png" alt="" width="150" height="150">
+      <p class="mt-2">Kadın-Erkek ilişkilerini düzenler. Erkeklerin kadın psikolojisini anlamasını sağlar. </p>
+    </div>
+    <div class="col-md-4 mt-5">
+      <img src="../../assets/icons/belly-dance.png" alt="" width="150" height="150">
+      <p class="mt-2">Kadınların iç dünyasını, davranışlarının altında yatan duyguları anlama ve karşılık verme tekniklerini öğretir. </p>
+    </div>
+    <div class="col-md-4 mt-5">
+      <img src="../../assets/icons/kiss.png" alt="" width="150" height="150">
+      <p class="mt-2">İlk mesajı atma, sohbet yönetimi, sohbet ilerletme, ilk buluşma, flört ynetimi gibi konuları ele alır. </p>
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="p-5" style="background-color:#430e00;" >
+  <div class=" text-center " >
+    <h2 class="mb-5" style="color: white;">POPÜLER ÜRÜNLER</h2>
+  </div>
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="card">
+          <img src="../../assets/img/vip-whatsapp-koclugu.jpg" alt="">
+          <h4><a href="http://localhost:4200/products/1" style="color: black;">VIP WHATSAPP KOÇLUĞU</a></h4>
+          <div> <h5>2000,00 ₺</h5></div>
+          <div class="text-center mb-2"><a href="https://capkincentilmen.dukkan.im/vip-whatsapp-koclugu" style="color: white;"><button  class="btn btn-dark w-50">Satın Al</button> </a></div>
+      </div>
+    </div>
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <img src="../../assets/img/ileri-seviye-whatsapp-koclugu.jpg" alt="">
+            <h4><a href="http://localhost:4200/products/2" style="color: black;">İLERİ SEVİYE WHATSAPP KOÇLUĞU</a></h4>
+            <div> <h5>1500,00 ₺</h5></div>
+            <div class="text-center mb-2"><a href="https://capkincentilmen.dukkan.im/ileri-seviye-whatsapp-koclugu" style="color: white;"><button  class="btn btn-dark w-50">Satın Al</button> </a></div>
+          
+        </div>
+      </div>
+  
+          <div class="col-md-4 text-center">
+            <div class="card">
+              <img src="../../assets/img/capkin-kitap-seti.jpg" alt="">
+              <h4><a href="http://localhost:4200/products/3" style="color: black;">ÇAPKIN KİTAP SETİ</a></h4>
+              <div> <h5>1500,00 ₺</h5></div>
+              <div class="text-center mb-2"><a href="https://capkincentilmen.dukkan.im/capkin-kitap-seti" id="button" style="color: white;"><button  class="btn btn-dark w-50">Satın Al</button> </a></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="p-5 text-center" style="border: 1px solid #430e00;" >
+ <h2 class="mb-4">HAYATINA ÇAPKIN BİR CENTİLMEN OLARAK DEVAM ETMEK İSTER MİSİN?</h2> 
+  <p>Sende şimdi aramıa katıl ve hayatına çapkın bir centilmen olarak devam et!</p>
+ <button id="btn-outline-darkred" class="btn btn-lg me-3" style="background-color: #430e00; color: white;" routerLink="/products" >ŞİMDİ ARAMIZA KATIL</button>
+ <button id="btn-outline-darkred" class="btn btn-lg btn-outline"  style="border: 1px solid #430e00;"> <a href="https://api.whatsapp.com/send/?phone=905434405594&text&type=phone_number&app_absent=0" target="_blank" id="button">BİLGİ AL </a> </button>
+</div>
+<br>
 <br>
 <br>

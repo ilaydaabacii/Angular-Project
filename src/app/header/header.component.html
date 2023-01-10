@@ -1,35 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
     <a
       href="/"
-      class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1 d-inline-flex"
+      class="mb-3 me-2 ms-3 mb-md-0 text-muted text-decoration-none lh-1 d-inline-flex"
     >
-     <span class="navbar-brand">Northwind</span>
+    <img src="../../assets/img/centilmencapkinlogo.jpg" id="effect" alt="" width="60px">
     </a>
+    <a
+    class="nav-link me-2"
+    href="#"
+    role="button" routerLink="/" style="font-size: 28px;">
+    Çapkın Centilmen
+  </a>
 
-    <div class="nav-item dropdown">
-      <a
-        class="nav-link ms-1 dropdown-toggle"
-        href="#"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <i class="fa-solid fa-language"></i>
-      </a>
-      <ul class="dropdown-menu">
-        <li (click)="setLang('en')" style="cursor: pointer">
-          <a class="dropdown-item">
-            <img src="../../assets/icons/gb.png" /> English</a
-          >
-        </li>
-        <li (click)="setLang('tr')" style="cursor: pointer">
-          <a class="dropdown-item"
-            ><img src="../../assets/icons/tr.png" /> Türkçe</a
-          >
-        </li>
-      </ul>
-    </div>
 
     <button
       class="navbar-toggler"
@@ -54,45 +37,137 @@
             routerLink="/"
             routerLinkActive=""
             [routerLinkActiveOptions]="{ exact: true }"
-            >{{ locale.index }}</a
+            >{{ locale.index }}  &nbsp; |  </a
           >
+          <a
+          class="nav-link ms-1"
+          routerLink="/products"
+          routerLinkActive=""
+          id="dropdown"
+          >{{ locale.products }}  &nbsp; |
+          </a>
+         
           <a
             class="nav-link ms-1"
-            routerLink="/products"
+            routerLink="/about-us"
             routerLinkActive=""
-            >{{ locale.products }}</a
+            >{{ locale.AboutUs }}  &nbsp; |  </a
           >
-          <a
-            class="nav-link ms-1"
-            routerLink="/employees"
-            routerLinkActive=""
-            >{{ locale.employees }}</a
-          >
-          <a
+          <!-- <a
             class="nav-link ms-1"
             routerLink="/get-messages"
             routerLinkActive=""
             >{{ locale.msgReceived }}</a
-          >
-
-          <a class="nav-link ms-1" routerLink="/logout" id="logout">{{
-            locale.logout
-          }}</a>
-        </ng-template>
-        <ng-template #login>
-          <a class="nav-link ms-1" routerLink="/login">
-            <i class="fa-solid fa-user-lock me-2"></i>{{ locale.login }}
-          </a>
-          <a class="nav-link ms-3" routerLink="/register">
-            <i class="fa-solid fa-user-pen me-2"></i>{{ locale.register }}
-          </a>
-        </ng-template>
-        <a
+          > -->
+          <a
           class="nav-link ms-1"
           routerLink="/contact-us"
           routerLinkActive=""
-          >{{ locale.contactUs }}</a
+          >{{ locale.contactUs }}  &nbsp; |</a
         >
+
+        <a
+        class="nav-link ms-1"
+        routerLink="/sık-sorulan-sorular"
+        routerLinkActive="" 
+        >Sık sorulan sorular  &nbsp; |  </a
+      >
+          <a class="nav-link ms-1" routerLink="/logout" id="logout">{{
+            locale.logout
+          }}</a>
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link ms-1 dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-language"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="setLang('en')" style="cursor: pointer">
+                <a class="dropdown-item">
+                  <img src="../../assets/icons/gb.png" /> English</a
+                >
+              </li>
+              <li (click)="setLang('tr')" style="cursor: pointer">
+                <a class="dropdown-item"
+                  ><img src="../../assets/icons/tr.png" /> Türkçe</a
+                >
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+        <ng-template #login>
+          <a
+          class="nav-link ms-1"
+          aria-current="page"
+          routerLink="/"
+          routerLinkActive=""
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ locale.index }}  &nbsp;  |</a
+        >
+        <a
+          class="nav-link ms-1"
+          routerLink="/products"
+          routerLinkActive=""
+          id="dropdown"
+          >{{ locale.products }}  &nbsp; |</a>
+        
+        <a
+          class="nav-link ms-1"
+          routerLink="/about-us"
+          routerLinkActive=""
+          >{{ locale.AboutUs }}  &nbsp; |</a
+        >
+        <!-- <a
+          class="nav-link ms-1"
+          routerLink="/get-messages"
+          routerLinkActive=""
+          >{{ locale.msgReceived }}</a
+        > -->
+        <a
+        class="nav-link ms-1"
+        routerLink="/contact-us"
+        routerLinkActive=""
+        >{{ locale.contactUs }}  &nbsp; |</a
+      >
+      <a
+      class="nav-link ms-1"
+      routerLink="/sık-sorulan-sorular"
+      routerLinkActive=""
+      >Sık sorulan sorular  &nbsp; | </a
+    >
+          <a class="nav-link ms-1" routerLink="/login">
+            <i class="fa-solid fa-user-lock me-2"></i>{{ locale.login }}
+          </a>
+          
+    <div class="nav-item dropdown">
+      <a
+        class="nav-link ms-1 dropdown-toggle"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-language"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li (click)="setLang('en')" style="cursor: pointer">
+          <a class="dropdown-item">
+            <img src="../../assets/icons/gb.png" /> English</a
+          >
+        </li>
+        <li (click)="setLang('tr')" style="cursor: pointer">
+          <a class="dropdown-item"
+            ><img src="../../assets/icons/tr.png" /> Türkçe</a
+          >
+        </li>
+      </ul>
+    </div>
+        </ng-template>
+      
       </div>
     </div>
   </div>

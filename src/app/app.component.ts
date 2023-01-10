@@ -17,7 +17,7 @@ export class AppComponent {
     name:'',
     subject:'',
     message:'',
-
+    AboutUs:'',
     index: '',
     products: '',
     categories: '',
@@ -57,14 +57,15 @@ export class AppComponent {
     if (!lang) this.setLang('tr');
 
     if (lang === 'tr') {
+      this.locale.AboutUs='Hakkımızda';
       this.locale.name='İsim';
       this.locale.subject='Konu'
       this.locale.message='Mesaj';
-      this.locale.index = 'Hakkımızda';
+      this.locale.index = 'Anasayfa';
       this.locale.products = 'Ürünler';
       this.locale.categories = 'Kategoriler';
       this.locale.employees = 'Çalışanlar';
-      this.locale.contactUs = 'Bize Ulaşın';
+      this.locale.contactUs = 'İletişim';
       this.locale.msgReceived = 'Gelen Mesajlar';
       this.locale.logout = 'Çıkış';
       this.locale.login = 'Giriş yap';
@@ -76,10 +77,11 @@ export class AppComponent {
       this.locale.send = 'Gönder';
     }
     if (lang === 'en') {
+      this.locale.AboutUs='About Us';
       this.locale.name='Name';
       this.locale.subject='Subject'
       this.locale.message='Message';
-      this.locale.index = 'About Us';
+      this.locale.index = 'Home';
       this.locale.products = 'Products';
       this.locale.categories = 'Categories';
       this.locale.employees = 'Employees';
