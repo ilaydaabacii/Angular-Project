@@ -1,46 +1,17 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ToastrService } from 'ngx-toastr';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import { IProduct } from '../Models/IProduct';
+import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/Models/IProduct';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+  selector: 'app-e-kitap',
+  templateUrl: './e-kitap.component.html',
+  styleUrls: ['./e-kitap.component.css']
 })
-export class ProductsComponent implements OnInit {
-  find(arg0: (i: any) => boolean): IProduct {
-    throw new Error('Method not implemented.');
-  }
-  getProductById(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-
-
+export class EKitapComponent implements OnInit {
+  
   orderHeader:string="";
   p: string|number|undefined;
   searchText :IProduct= {"id": null , "pakettipi": '' , "paketURL":'',  "paketadi":'' , "fiyat":null, "imgURL":'' , "aciklama":'' }
   products: IProduct[] = [
-    {
-       "id": 1,
-       "pakettipi": "kocluk",
-       "paketURL": "vip-whatsapp-koclugu",
-       "paketadi": "VIP Whatsapp Koçluğu",
-       "fiyat": 2500.00,
-       "imgURL": "vip-whatsapp-koclugu.jpg",
-       "aciklama": "30 günlük VIP whatsapp koçluğunda Çapkın Centilmen ile whatsapp üzerinden eğitim alırsınız. 30 günlük paketin fiyatı diğerine nazaran daha yüksek olsa da gün açısından bakıldığında daha hesaplı ve daha uzun eğitim almanıza olanak sağlar."
-    },
-    {
-     "id": 2,
-     "paketURL": "ileri-seviye-whatsapp-koclugu",
-     "pakettipi": "kocluk",
-     "paketadi": "İleri Seviye Whatsapp Koçluğu",
-     "fiyat": 1500.00,
-     "imgURL": "ileri-seviye-whatsapp-koclugu.jpg",
-     "aciklama": "10 günlük ileri seviye whatsapp koçluğunda Çapkın Centilmen ile whatsapp üzerinden eğitim alırsınız. 10 günlük paket düşük bütçeye sahip olanlar için fiyat-performans paketidir. "
-    },
     {
      "id": 3,
      "paketURL": "capkin-kitap-seti",
@@ -130,24 +101,6 @@ export class ProductsComponent implements OnInit {
      "fiyat": 150.00,
      "imgURL": "gercek-hayatta-kadinlari-etkileyin.jpg",
      "aciklama": "Bu kitap, karışık terimlerden arındırılmış ve herkesin anlayabileceği net bir dille yazılmıştır. Kitapta yer alan bilgiler, senelerdir süregelen bilgi ve deneyimlere dayanmaktadır. "
-    },
-    {
-     "id": 13,
-     "pakettipi": "kitap",
-     "paketURL": "60-dakika-telefon-gorusmesi",
-     "paketadi": "60 Dakika Telefon Görüşmesi",
-     "fiyat": 150.00,
-     "imgURL": "60-dakika-telefon-gorusmesi.jpg",
-     "aciklama": "Birebir telefon görüşmesi, koçluk gerektirmeyecek kadar kısa lakin önemli kişisel sorunlarınıza birlikte çözüm üretebileceğimiz hizmet stilidir. 60 dakika boyunca bana sorunlarınızı aktarıp, görüşümü ve ilgili konuda ne yapmanız gerektiği hakkında bilgi alabilirsiniz."
-    },
-    {
-     "id": 14,
-     "pakettipi": "kitap",
-     "paketURL": "saha-egitimi-1-gun-",
-     "paketadi": "Saha Eğitimi (1 Gün)",
-     "fiyat": 150.00,
-     "imgURL": "saha-egitimi-1-gun- (1).jpg",
-     "aciklama": "Günümüzde sosyal medya üzerinden bir kadına onlarca belki de yüzlerce erkek mesaj atıyor. Çekici bulduğumuz bir kadına mesaj attığımızda, mesajımızın diğer mesajlar arasında kaybolması ve görülmeme durumu olabiliyor. Gerçek hayatta böyle bir şey yoktur dostlarım. İsterse milyonlarca takipçisi olsun, karşısına çıktığınızda o an sadece siz varsınız!"
     }
  ];
 
@@ -157,10 +110,9 @@ export class ProductsComponent implements OnInit {
  }
 
 
- 
-  constructor() {}
-  ngOnInit(): void {}
+  constructor() { }
 
-  
+  ngOnInit(): void {
+  }
+
 }
-

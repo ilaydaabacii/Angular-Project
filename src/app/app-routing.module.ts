@@ -6,10 +6,11 @@ import { RegisterComponent } from './header/register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainComponent } from './main/main.component';
-import { GetMessagesComponent } from './get-messages/get-messages.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { SssComponent } from './sss/sss.component';
+import { KoclukComponent } from './products/kocluk/kocluk.component';
+import { EKitapComponent } from './products/e-kitap/e-kitap.component';
 
 
 const routes: Routes = [
@@ -20,10 +21,10 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: 'get-messages', component: GetMessagesComponent },
   { path: 'products/:productId', component: ProductDetailComponent },
   { path: 'sık-sorulan-sorular', component: SssComponent },
- 
+  { path: 'kocluk', component: KoclukComponent},
+  { path: 'e-kitap', component: EKitapComponent }
 ];
 
 @NgModule({

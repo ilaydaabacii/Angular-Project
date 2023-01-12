@@ -8,9 +8,9 @@
     <div class="row">
       <div class="col-md-9 ms-3">
         <div class="search mt-3 mb-5 ">
-          <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="searchText"
-          (keyup)="onInputChange()">
-          <span class="text-muted" *ngIf="searchText"> Aradığınız kelime : {{searchText}}</span>
+          <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="searchText.paketadi"
+          >
+          <span class="text-muted" *ngIf="searchText.paketadi"> Aradığınız kelime : {{searchText.paketadi}}</span>
         </div>
       </div>
      <div class="col-md-1 text-end ms-5">
@@ -25,7 +25,12 @@
           >
             Sıralama
         </button>
+     
           <ul class="dropdown-menu">
+            <li style="cursor: pointer" >
+              <a class="dropdown-item" (click)="sort('id')"
+                >En çok satılan</a
+              >
             <li style="cursor: pointer">
               <a class="dropdown-item" (click)="sort('paketadi')">
               İsime göre</a>
@@ -34,6 +39,7 @@
               <a class="dropdown-item" (click)="sort('fiyat')"
                 >fiyata göre</a
               >
+            
             </li>
           </ul>
         </div>
@@ -52,13 +58,16 @@
           Ürünler
       </button>
           <ul class="dropdown-menu" >
-            <li style="cursor: pointer">
+            <li style="cursor: pointer" routerLink="/products">
+              <a class="dropdown-item"  >
+                 Tüm ürünler</a>
+                </li>
+            <li style="cursor: pointer" routerLink="/kocluk">
               <a class="dropdown-item"  >
              Koçluk</a>
             </li>
-            <li style="cursor: pointer">
-              <a class="dropdown-item" 
-                > E-Kitap</a
+            <li style="cursor: pointer" routerLink="/e-kitap">
+              <a class="dropdown-item" > E-Kitap</a
               >
             </li>
           </ul>
@@ -72,7 +81,9 @@
     <ng-container *ngIf="products.length > 0; else noProducts ">
       <div class="container">
        <div class="row" >
-        <div class="col-md-4 col-sm-6 " *ngFor="let product of products | orderBy: orderHeader | paginate: { itemsPerPage:9 , currentPage: p }  ">
+        <div class="col-md-4 col-sm-6 " *ngFor="let product of products | orderBy: orderHeader 
+        |filterBy: searchText 
+        | paginate: { itemsPerPage:9 , currentPage: p }  ">
           <div class="card text-center mb-3" >
             <a routerLink="/products/{{product.id}}"> <img class="card-img-top "  src="../../assets/img/{{product.imgURL}}" alt="{{product.paketadi}}"  ></a>
            
@@ -83,7 +94,7 @@
                   <h4 class="card-text">{{product.fiyat}} ₺</h4>
                 </div>
                 <div class="col-md-8 text-end">
-                  <a href="https://capkincentilmen.dukkan.im/{{product.paketURL}}" target="_blank" class="btn btn-outline-dark">Satın Al</a>
+                  <a href="https://capkincentilmen.dukkan.im/{{product.paketURL}}" target="_blank" class="btn btn-outline-dark" id="satınal">Satın Al</a>
                 </div>
               </div>
             

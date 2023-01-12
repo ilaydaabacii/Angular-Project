@@ -26,7 +26,6 @@ import {
 import { MainComponent } from './main/main.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { GetMessagesComponent } from './get-messages/get-messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SummaryPipe } from './pipe/summary.pipe';
 import { NgsRevealModule } from 'ngx-scrollreveal';
@@ -37,6 +36,8 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { SssComponent } from './sss/sss.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { KoclukComponent } from './products/kocluk/kocluk.component';
+import { EKitapComponent } from './products/e-kitap/e-kitap.component';
 
 
 
@@ -51,13 +52,14 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     ProductsComponent,
     MainComponent,
     ContactUsComponent,
-    GetMessagesComponent,
     SummaryPipe,
     AboutUsComponent,
     SortByPipe,
     ProductDetailComponent,
     FilterPipe,
     SssComponent,
+    KoclukComponent,
+    EKitapComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,115 @@
+<div class="text-center mt-5 p-5" id="bg">
+    <h1>Koçluk Paketleri</h1>
+    <p><a href="" routerLink="/" id="header">Çapkın Centilmen</a> <a style="color: gray;" routerLink="/products" id="header">> Ürünler </a> <a style="color: gray;" routerLink="/kocluk" id="header">> Koçluk</a></p>
+  </div>
+  
+  <div>
+    <div >
+      <div class="row">
+        <div class="col-md-9 ms-3">
+          <div class="search mt-3 mb-5 ">
+            <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="searchText.paketadi"
+            >
+            <span class="text-muted" *ngIf="searchText.paketadi"> Aradığınız kelime : {{searchText.paketadi}}</span>
+          </div>
+        </div>
+       <div class="col-md-1 text-end ms-5">
+        <div class="mt-3 mb-5 ">
+          <div class="nav-item dropdown " >
+            <button
+              class="dropdown-toggle btn btn-outline-dark"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sıralama
+          </button>
+       
+            <ul class="dropdown-menu">
+              <li style="cursor: pointer" >
+                <a class="dropdown-item" (click)="sort('id')"
+                  >En çok satılan</a
+                >
+              <li style="cursor: pointer">
+                <a class="dropdown-item" (click)="sort('paketadi')">
+                İsime göre</a>
+              </li>
+              <li style="cursor: pointer">
+                <a class="dropdown-item" (click)="sort('fiyat')"
+                  >fiyata göre</a
+                >
+              
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 text-end ms-3">
+        <div class="mt-3 mb-5 ">
+          <div class="nav-item dropdown" >
+            <button
+            class="dropdown-toggle btn btn-outline-dark"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Ürünler
+        </button>
+            <ul class="dropdown-menu" >
+                <li style="cursor: pointer" routerLink="/products">
+                <a class="dropdown-item"  >
+                   Tüm ürünler</a>
+                  </li>
+              <li style="cursor: pointer" routerLink="/kocluk">
+                <a class="dropdown-item"  >
+               Koçluk</a>
+              </li>
+              <li style="cursor: pointer"routerLink="/e-kitap">
+                <a class="dropdown-item" > E-Kitap</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       </div>
+      
+      
+      
+      <ng-container *ngIf="products.length > 0; else noProducts ">
+        <div class="container">
+         <div class="row" >
+          <div class="col-md-4 col-sm-6 " *ngFor="let product of products | orderBy: orderHeader 
+          |filterBy: searchText 
+          | paginate: { itemsPerPage:9 , currentPage: p }  ">
+            <div class="card text-center mb-3" >
+              <a routerLink="/products/{{product.id}}"> <img class="card-img-top "  src="../../assets/img/{{product.imgURL}}" alt="{{product.paketadi}}"  ></a>
+             
+              <div class="card-body">
+                <h6 class="card-title" ><a routerLink="/products/{{product.id}}">{{product.paketadi}}</a></h6>
+                <div class="row mt-5">
+                  <div class="col-md-4 text-start">
+                    <h4 class="card-text">{{product.fiyat}} ₺</h4>
+                  </div>
+                  <div class="col-md-8 text-end">
+                    <a href="https://capkincentilmen.dukkan.im/{{product.paketURL}}" target="_blank" class="btn btn-outline-dark" id="satınal">Satın Al</a>
+                  </div>
+                </div>
+              
+               
+              </div>
+            </div>
+          </div>
+      
+      </div>
+        </div>
+      </ng-container>
+      <ng-template #noProducts>
+        <div class="alert alert-danger">Ürün bulunamadı.</div>
+      </ng-template>
+      <pagination-controls class="d-flex justify-content-center mt-3" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+  

@@ -37,3 +37,11 @@
         -webkit-background-size: 100% 100%;           /* Safari 3.0, Chrome */
         background-size: 100% 100%;  
     }
+    #ulasım{
+        color: black;
+     }
+
+    #ulasım:hover{
+       color: darkgreen;
+       font-weight: bolder;
+    }

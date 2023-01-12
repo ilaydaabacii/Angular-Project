@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetMessagesComponent } from './get-messages.component';
+import { KoclukComponent } from './kocluk.component';
 
-describe('GetMessagesComponent', () => {
-  let component: GetMessagesComponent;
-  let fixture: ComponentFixture<GetMessagesComponent>;
+describe('KoclukComponent', () => {
+  let component: KoclukComponent;
+  let fixture: ComponentFixture<KoclukComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetMessagesComponent ]
+      declarations: [ KoclukComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GetMessagesComponent);
+    fixture = TestBed.createComponent(KoclukComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
