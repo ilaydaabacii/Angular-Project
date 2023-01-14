@@ -6,4 +6,5 @@ export interface IProduct {
     paketadi: string;
     fiyat: number;
     aciklama:string;
+    indirimlifiyat:number;
 }

@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { SssComponent } from './sss/sss.component';
 import { KoclukComponent } from './products/kocluk/kocluk.component';
 import { EKitapComponent } from './products/e-kitap/e-kitap.component';
+import { EgitimComponent } from './products/egitim/egitim.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'products/:productId', component: ProductDetailComponent },
   { path: 'sık-sorulan-sorular', component: SssComponent },
   { path: 'kocluk', component: KoclukComponent},
-  { path: 'e-kitap', component: EKitapComponent }
+  { path: 'e-kitap', component: EKitapComponent },
+  { path: 'egitimler', component: EgitimComponent }
 ];
 
 @NgModule({

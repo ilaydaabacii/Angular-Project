@@ -1,0 +1,27 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: black;
+}
+#header:hover{
+    color: darkred;
+    font-size: large;
+}
+
+#dropdown{
+    border: 1px solid ;
+}
+
+#bg{
+    background-image: url(../../../assets/img/bgh.jpg);
+    -moz-background-size: 100% 100%;           /* Firefox 3.6 */
+	-o-background-size: 100% 100%;           /* Opera 9.5 */
+	-webkit-background-size: 100% 100%;           /* Safari 3.0, Chrome */
+	background-size: 100% 100%;  
+}
+
+#satınal:hover{
+    color: white;
+}

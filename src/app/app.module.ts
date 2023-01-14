@@ -38,6 +38,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { KoclukComponent } from './products/kocluk/kocluk.component';
 import { EKitapComponent } from './products/e-kitap/e-kitap.component';
+import { EgitimComponent } from './products/egitim/egitim.component';
 
 
 
@@ -60,6 +61,7 @@ import { EKitapComponent } from './products/e-kitap/e-kitap.component';
     SssComponent,
     KoclukComponent,
     EKitapComponent,
+    EgitimComponent,
   ],
   imports: [
     BrowserModule,
